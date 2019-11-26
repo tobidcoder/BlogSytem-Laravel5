@@ -50,8 +50,30 @@
                           </div>
                       </div>
                   </form>
-                </div>
+
+
+            <div class="col-md-4">
+
+              <div class="form-group{{ $errors->has('category_id') ? ' has-error' : '' }}">
+                  <label for="category_id" class="col-md-4 control-label">category list</label>
+
+                  <div class="col-md-8">
+                      <select id="category_id" type="text" class="form-control" name="category_id" value="{{ old('category_id') }}" required >
+                        @if(count($category) > 0)
+                          @foreach ($category->all() as $category)
+                               <a href='{{ url("category/{$category->id}") }}'><option> {{$category->category}} </option></a>
+                           @endforeach
+
+                        @endif
+
+              </select>
+
+                  </div>
+              </div>
+
+              </div>
             </div>
+        </div>
         </div>
     </div>
 </div>

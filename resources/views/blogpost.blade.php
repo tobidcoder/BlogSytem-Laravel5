@@ -59,11 +59,7 @@
                               @endif
 
                     </select>
-                            @if ($errors->has('categories_id'))
-                                <span class="help-block">
-                                    <strong>{{ $errors->first('categories_id') }}</strong>
-                                </span>
-                            @endif
+
                         </div>
                     </div>
 

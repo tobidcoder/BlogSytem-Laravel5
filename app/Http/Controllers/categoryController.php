@@ -8,7 +8,9 @@ use App\Category;
 class categoryController extends Controller
 {
     public function category(){
-      return view('/categories.category');
+      $category = Category::all();
+
+      return view('/categories.category', ['category' => $category]);
     }
 
     public function addCategory(Request $request){
@@ -22,4 +24,5 @@ class categoryController extends Controller
       $category->save();
        return redirect('/category')->with('response', 'categories added successfully');
     }
+
 }

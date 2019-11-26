@@ -35,4 +35,3 @@ Route::get('/like/{id}', 'postController@like')->middleware('auth');
 Route::get('/dislike/{id}', 'postController@dislike')->middleware('auth');
 Route::post('/comment/{id}', 'postController@comment')->middleware('auth');
 Route::post('/search', 'postController@search')->middleware('auth');
-// Route::get('/search', 'postController@search');
